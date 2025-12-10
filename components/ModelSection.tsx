@@ -18,62 +18,69 @@ export const ModelSection: React.FC = () => {
           無論形狀如何變化，支撐故事骨架的永遠是這三個步驟。這是一個萬用的寫作公式。
         </p>
 
-        <div className="flex flex-col gap-4">
-          {/* Step 1 */}
-          <div className="flex items-stretch bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm">
-            <div className="bg-primary text-white w-16 md:w-20 p-2 flex items-center justify-center font-bold text-center flex-shrink-0">
-              <div className="flex flex-col items-center">
-                <span className="text-2xl">1</span>
-                <span className="text-xs uppercase mt-1">Intro</span>
-              </div>
+        {/* Horizontal Layout (Grid) */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          
+          {/* Step 1 Card */}
+          <div className="flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-primary text-white p-3 flex items-center justify-between">
+              <span className="font-bold text-lg">Step 1</span>
+              <span className="text-xs uppercase bg-white/20 px-2 py-1 rounded">Intro</span>
             </div>
-            <div className="p-6 flex-1">
-              <div className="flex items-center gap-2 mb-2 font-bold text-gray-800">
+            <div className="p-5 flex-1 flex flex-col">
+              <div className="flex items-center gap-2 mb-3 font-bold text-gray-800 text-lg border-b border-gray-100 pb-2">
                 <BookOpen className="w-5 h-5 text-gray-400" />
-                引言 (Exposition)
+                引言
               </div>
               <strong className="block text-accent mb-2">Who? Where? Want?</strong>
-              <p className="text-gray-600 mb-2">建立故事的基礎。讓觀眾快速理解角色是誰、在哪裡、想要什麼（動機）。</p>
-              <p className="text-sm text-gray-500 italic">👉 關鍵：如果你不關心角色，就不會關心故事。</p>
+              <p className="text-gray-600 text-sm mb-3 flex-1">
+                建立故事的基礎。讓觀眾快速理解角色是誰、在哪裡、想要什麼（動機）。
+              </p>
+              <div className="bg-gray-50 p-2 rounded text-xs text-gray-500 italic border border-gray-100">
+                👉 關鍵：如果你不關心角色，就不會關心故事。
+              </div>
             </div>
           </div>
 
-          {/* Step 2 */}
-          <div className="flex items-stretch bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm ring-1 ring-accent/20">
-            <div className="bg-accent text-white w-16 md:w-20 p-2 flex items-center justify-center font-bold text-center flex-shrink-0">
-              <div className="flex flex-col items-center">
-                <span className="text-2xl">2</span>
-                <span className="text-xs uppercase mt-1">Conflict</span>
-              </div>
+          {/* Step 2 Card */}
+          <div className="flex flex-col h-full bg-white border-2 border-accent/20 rounded-lg overflow-hidden shadow-md relative">
+            <div className="bg-accent text-white p-3 flex items-center justify-between">
+              <span className="font-bold text-lg">Step 2</span>
+              <span className="text-xs uppercase bg-white/20 px-2 py-1 rounded">Conflict</span>
             </div>
-            <div className="p-6 flex-1 bg-orange-50/30">
-              <div className="flex items-center gap-2 mb-2 font-bold text-gray-800">
+            <div className="p-5 flex-1 flex flex-col bg-orange-50/30">
+              <div className="flex items-center gap-2 mb-3 font-bold text-gray-800 text-lg border-b border-orange-100 pb-2">
                 <AlertTriangle className="w-5 h-5 text-accent" />
-                衝突 (Conflict)
+                衝突
               </div>
               <strong className="block text-accent mb-2">But... Problem!</strong>
-              <p className="text-gray-600 mb-2">推動故事的核心。角色遇到了阻礙（外在敵人或內在恐懼）。沒有衝突，就沒有故事。</p>
-              <p className="text-sm text-gray-500 italic">👉 關鍵：這是故事強度 (Intensity) 上升的階段。</p>
+              <p className="text-gray-600 text-sm mb-3 flex-1">
+                推動故事的核心。角色遇到了阻礙（外在敵人或內在恐懼）。沒有衝突，就沒有故事。
+              </p>
+              <div className="bg-white p-2 rounded text-xs text-accent font-medium border border-orange-100">
+                👉 關鍵：這是故事強度 (Intensity) 上升的階段。
+              </div>
             </div>
           </div>
 
-          {/* Step 3 */}
-          <div className="flex items-stretch bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm">
-            <div className="bg-primary text-white w-16 md:w-20 p-2 flex items-center justify-center font-bold text-center flex-shrink-0">
-              <div className="flex flex-col items-center">
-                <span className="text-2xl">3</span>
-                <span className="text-xs uppercase mt-1">End</span>
-              </div>
+          {/* Step 3 Card */}
+          <div className="flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-primary text-white p-3 flex items-center justify-between">
+              <span className="font-bold text-lg">Step 3</span>
+              <span className="text-xs uppercase bg-white/20 px-2 py-1 rounded">Resolution</span>
             </div>
-            <div className="p-6 flex-1">
-              <div className="flex items-center gap-2 mb-2 font-bold text-gray-800">
+            <div className="p-5 flex-1 flex flex-col">
+              <div className="flex items-center gap-2 mb-3 font-bold text-gray-800 text-lg border-b border-gray-100 pb-2">
                 <CheckCircle2 className="w-5 h-5 text-green-500" />
-                解決 (Resolution)
+                解決
               </div>
               <strong className="block text-accent mb-2">So...</strong>
-              <p className="text-gray-600">收束故事。角色如何面對？結局是喜是悲？觀眾獲得了什麼情感滿足？</p>
+              <p className="text-gray-600 text-sm mb-3 flex-1">
+                收束故事。角色如何面對？結局是喜是悲？觀眾獲得了什麼情感滿足？
+              </p>
             </div>
           </div>
+          
         </div>
       </Card>
 
